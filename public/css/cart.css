@@ -1,0 +1,11 @@
+body {
+    background-color: lightblue;
+}
+input.ng-touched.ng-invalid,
+select.ng-touched.ng-invalid {
+    border: 5px solid red;
+}
+.well {
+    border: 6px;
+    border-style: outset;
+}

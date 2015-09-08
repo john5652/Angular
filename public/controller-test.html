@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Test</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/cart.css">
+</head>
+<body ng-app="controllerTest">
+
+
+<header class="page-header col-md-offset-1">
+    <h1>Your Cart</h1>
+</header>
+
+
+<div ng-controller="CartController as cart">
+
+<main class="row">
+    <form class="container col-md-6 col-md-offset-1" novalidate name="userForm">
+
+        <div class="well">
+            <div class="form-group">
+                <input type="text" name="title" ng-model="cart.newItem.title">
+                <input type="text" name="price" ng-model="cart.newItem.price">
+                <input type="text" name="quanity" ng-model="cart.newItem.quanity">
+                <button ng-click="cart.addItem()">Add</button>
+            </div>
+        </div>
+
+    </form>
+</main>
+
+
+    <code>
+        {{ cart.newItem | json }}
+        {{ cart.items | json }}
+    </code>
+</div>
+
+
+    <script type="text/javascript" src="/js/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/controllerTest.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
